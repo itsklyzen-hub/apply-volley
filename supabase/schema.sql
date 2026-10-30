@@ -9,6 +9,9 @@ create table if not exists public.team_data (
 
 alter table public.team_data enable row level security;
 
+-- Accès via l'API pour les utilisateurs connectés (les règles ci-dessous filtrent par compte).
+grant select, insert, update on public.team_data to authenticated;
+
 -- Chaque compte ne voit et ne modifie que sa propre équipe.
 create policy "Lire sa propre équipe" on public.team_data
   for select using (auth.uid() = user_id);
