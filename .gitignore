@@ -42,5 +42,3 @@ example
 /ios
 /android
 
-# Clés Supabase locales
-.env

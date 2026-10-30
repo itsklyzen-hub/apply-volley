@@ -17,7 +17,7 @@ Construite avec **Expo SDK 58** (React Native) et **Expo Router**. Il faut **cr�
 1. Crée un projet gratuit sur [supabase.com](https://supabase.com).
 2. Dans **SQL Editor**, colle le contenu de [`supabase/schema.sql`](supabase/schema.sql) et clique sur **Run**. Cela crée la table `team_data` et les règles de sécurité : chaque compte ne voit que sa propre équipe.
 3. Dans **Project Settings > API**, récupère l'URL du projet et la clé publique `anon`.
-4. Copie `.env.example` en `.env` et colle ces deux valeurs.
+4. Mets ces deux valeurs dans `.env` (déjà rempli pour le projet actuel).
 5. Optionnel : dans **Authentication > Sign In / Providers > Email**, désactive « Confirm email » si tu ne veux pas que les nouveaux comptes aient à confirmer leur adresse.
 
 La clé `anon` est faite pour être embarquée dans l'app ; ne mets jamais la clé `service_role` dans `.env`.
